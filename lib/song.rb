@@ -45,7 +45,7 @@ class Song
   def self.artist_count
     artist_hash = {}
     @@artists.each do |artist|
-      artist_hash[artist] ||= 0
+      artist_hash[artist] ||= 0 # ||= when you don't want value overwritten
       artist_hash[artist] += 1
     end
     artist_hash
